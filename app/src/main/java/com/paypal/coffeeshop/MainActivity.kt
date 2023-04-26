@@ -14,8 +14,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.paypal.coffeeshop.R
 import java.text.NumberFormat
 import java.util.*
-
-
+/*import com.paypal.coffeeshop.dataBiniding.ActivityMainBiniding
+import com.paypal.coffeeshop.dataBiniding.ActivitySecondBinding*/
 /**
  * This app displays an order form to order coffee.
  */
@@ -23,8 +23,10 @@ class MainActivity : AppCompatActivity() {
     /**
      * This method is called when the widget is created.
      */
+//    val binding: ActivityMainBiniding = TODO()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        binding = ActiviyMainBinding.inflate(layoutInflater, null, false)
         setContentView(R.layout.activity_main)
         // Disable default focus for EditText widget
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
@@ -151,7 +153,6 @@ class MainActivity : AppCompatActivity() {
                     R.string.of_coffee
                 )
             }
-                ${getString(R.string.total_price)}: $totalPrice
                 ${getString(R.string.whipped_cream_words)}: $hasWhippedCream
                 ${getString(R.string.chocolate_word)}: $hasChocolate
                 ${getString(R.string.thank_you)}
