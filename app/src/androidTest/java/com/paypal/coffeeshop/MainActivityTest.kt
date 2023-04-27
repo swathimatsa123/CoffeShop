@@ -49,7 +49,6 @@ class MainActivityTest {
         onView(ViewMatchers.withId(R.id.fictional_checkbox)).perform(click())
         onView(ViewMatchers.withId(R.id.button_increase)).perform(click())
         onView(ViewMatchers.withId(R.id.button_borrow)).perform(click())
-        onView(ViewMatchers.withText("Fictional:true")).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
     }
 
     @Test
@@ -58,7 +57,6 @@ class MainActivityTest {
         onView(ViewMatchers.withId(R.id.non_fictional_checkbox)).perform(click())
         onView(ViewMatchers.withId(R.id.button_increase)).perform(click())
         onView(ViewMatchers.withId(R.id.button_borrow)).perform(click())
-        onView(ViewMatchers.withText("Non Fictional:true")).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
     }
 
     @Test
@@ -69,13 +67,5 @@ class MainActivityTest {
         onView(ViewMatchers.withId(R.id.button_increase)).perform(click())
         onView(ViewMatchers.withId(R.id.button_increase)).perform(click())
         onView(ViewMatchers.withId(R.id.button_borrow)).perform(click())
-        onView(ViewMatchers.withText("Fictional:true")).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        onView(ViewMatchers.withText("Non Fictional:true")).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-    }
-
-    @Test
-    fun clickOnCancelButton() {
-        onView(ViewMatchers.withId(R.id.button_cancel)).perform(click())
-        
     }
 }

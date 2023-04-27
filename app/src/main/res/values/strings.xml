@@ -2,6 +2,7 @@
     <string name="app_name">Books Leanding App</string>
     <string name="name">Enter your name here</string>
     <string name="books">Books</string>
+    <string name="booksList">List Of Books</string>
     <string name="fictional">Fictional</string>
     <string name="nonFictional">Non Fictional</string>
     <string name="quantity">Quantity:</string>

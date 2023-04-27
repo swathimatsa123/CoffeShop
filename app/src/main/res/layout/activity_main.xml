@@ -12,16 +12,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/name_text"
             style="@style/TextTheme2"
             android:layout_width="fill_parent"
-            android:hint="@string/name"
-            android:inputType="textNoSuggestions"
-            android:importantForAutofill="no"
             android:background="@android:color/transparent"
+            android:hint="@string/name"
+            android:importantForAutofill="no"
+            android:inputType="textNoSuggestions"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,16 +35,16 @@
         <CheckBox
             android:id="@+id/fictional_checkbox"
             style="@style/TextTheme2"
-            android:text="@string/fictional"
             android:onClick="addFictional"
+            android:text="@string/fictional"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_books" />
 
         <CheckBox
             android:id="@+id/non_fictional_checkbox"
             style="@style/TextTheme2"
-            android:text="@string/nonFictional"
             android:onClick="addNonFictional"
+            android:text="@string/nonFictional"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fictional_checkbox" />
 
@@ -92,29 +92,33 @@
                     app:layout_constraintLeft_toRightOf="@id/text_price"
                     app:layout_constraintTop_toBottomOf="@id/button_decrease" />
  -->
-                <Button
-                    android:id="@+id/button_borrow"
-                    style="@style/ButtonTheme"
-                    android:onClick="submitOrder"
-                    android:text="@string/borrow"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/button_decrease" />
+        <Button
+            android:id="@+id/button_borrow"
+            style="@style/ButtonTheme"
+            android:onClick="submitOrder"
+            android:text="@string/borrow"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_decrease" />
 
-                <Button
-                    android:id="@+id/button_cancel"
-                    style="@style/ButtonTheme"
-                    android:onClick="cancelOrder"
-                    android:text="@string/cancel"
-                    app:layout_constraintLeft_toRightOf="@id/button_borrow"
-                    app:layout_constraintTop_toBottomOf="@id/button_decrease" />
+        <Button
+            android:id="@+id/button_cancel"
+            style="@style/ButtonTheme"
+            android:onClick="cancelOrder"
+            android:text="@string/cancel"
+            app:layout_constraintLeft_toRightOf="@id/button_borrow"
+            app:layout_constraintTop_toBottomOf="@id/button_decrease" />
 
-                <TextView
-                    android:id="@+id/text_order_message"
-                    style="@style/TextTheme2"
-                    android:text="@string/order_message"
-                    android:textColor="@android:color/holo_red_dark"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/button_borrow" />
+        <TextView
+            android:id="@+id/text_order_message"
+            style="@style/TextTheme2"
+            android:text="@string/order_message"
+            android:textColor="@android:color/holo_red_dark"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_borrow" />
+        <ListView
+            android:id = "@+id/listView"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
